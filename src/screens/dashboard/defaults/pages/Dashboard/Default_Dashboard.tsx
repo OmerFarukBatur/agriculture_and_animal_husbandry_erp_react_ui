@@ -10,6 +10,7 @@ import DefaultLayout from '../../DefaultLayout';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastrMessageType, ToastrPosition } from '../../../../../services/toastify/ToastifyConfiguration';
+import ModalService from '../../../../../services/modal/ModalService';
 
 const Default_Dashboard: React.FC = () => {
 
@@ -20,6 +21,8 @@ const Default_Dashboard: React.FC = () => {
         position:ToastrPosition.BottomRight}
       ); 
   }
+
+ 
 
   useEffect((title="Başlık 1",message="Deneme") => {
     
@@ -126,6 +129,7 @@ const Default_Dashboard: React.FC = () => {
         <ChatCard />
       </div>
       <ToastContainer /> {/* Bu olmadan kesinlikle Toastr çalışmıor. */}
+      <ModalService  title="Deneme" message="Merhaba Nasılsın" yes={()=>alert("Yes çalıştı")} no={()=>alert("No çalıştı")}></ModalService>
     </DefaultLayout>
   );
 };
