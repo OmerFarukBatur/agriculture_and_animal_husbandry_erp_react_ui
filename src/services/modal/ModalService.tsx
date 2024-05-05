@@ -5,8 +5,8 @@ import './model_style.css';
 
 
 interface CustomInputProps{
-    title: string
-    message: string
+    title?: string
+    message?: string
     yes():void
     no():void
 }

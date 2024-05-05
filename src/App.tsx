@@ -12,6 +12,7 @@ import Profile from './screens/dashboard/defaults/pages/Profile';
 import Settings from './screens/dashboard/defaults/pages/Settings';
 import Tables from './screens/dashboard/defaults/pages/Tables';
 import MainPage from './screens/ui/pages/mainpage/MainPage';
+import Address from './screens/dashboard/defaults/pages/Address';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -63,6 +64,15 @@ function App() {
             <>
               <PageTitle title="Dashboard | FAM Technology" />
               <Default_Dashboard />
+            </>
+          }
+        />
+         <Route
+           path="/adres-islemleri"
+          element={
+            <>
+              <PageTitle title="Adres İşlemleri" />
+              <Address />
             </>
           }
         />
